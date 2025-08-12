@@ -1,2 +1,2 @@
 # disciplina-desenvolvimento-mobile
-códigos do dev mobile
+alterando de maneira local 
