@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4gne4gs2pk31"]
+
+[ext_resource type="Script" uid="uid://duyv7yinokm56" path="res://atividade17/button,_text_edits,_labels_e_option_menu.gd" id="1_v6hnf"]
+[ext_resource type="Script" uid="uid://qc8707lxco77" path="res://atividade17/option_button.gd" id="2_hhuie"]
+
+[node name="Button,TextEdits,LabelsEOptionMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_v6hnf")
+
+[node name="numero1" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 17.0
+offset_right = 250.0
+offset_bottom = 75.0
+placeholder_text = "1°Numero"
+
+[node name="numero2" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 109.0
+offset_right = 254.0
+offset_bottom = 173.0
+placeholder_text = "2°Numero"
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 65.0
+offset_right = 434.0
+offset_bottom = 117.0
+item_count = 4
+popup/item_0/text = "soma"
+popup/item_0/id = 0
+popup/item_1/text = "divisão"
+popup/item_1/id = 2
+popup/item_2/text = "subtração"
+popup/item_2/id = 1
+popup/item_3/text = "multiplicação"
+popup/item_3/id = 3
+script = ExtResource("2_hhuie")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 155.0
+offset_right = 389.0
+offset_bottom = 200.0
+theme_override_colors/font_disabled_color = Color(0.80263, 0.205224, 0.671393, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.883292, 0.468753, 0.932638, 1)
+text = "Calcular
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 190.0
+offset_right = 214.0
+offset_bottom = 265.0
+theme_override_colors/font_color = Color(0.921686, 0.60827, 0.853013, 1)
+theme_override_colors/font_shadow_color = Color(0.786898, 0.283015, 0.705449, 1)
+theme_override_colors/font_outline_color = Color(0.783904, 0.768805, 0.738264, 1)
+text = "Resultado
+
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
