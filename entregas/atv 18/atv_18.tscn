@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://0t8x3dnix70f"]
+
+[ext_resource type="Script" uid="uid://ddx5hsaewbdko" path="res://atv 18/atv_18.gd" id="1_4dcqo"]
+[ext_resource type="Texture2D" uid="uid://cyvupny7emh8h" path="res://atv 18/32x32 circle bar progress dark grey.png" id="2_10111"]
+[ext_resource type="Texture2D" uid="uid://dpiy5lih5ay2s" path="res://atv 18/32x32 circle bar progress light brown.png" id="3_kj1ee"]
+
+[node name="Atv18" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4dcqo")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 130.0
+offset_right = 494.0
+offset_bottom = 176.0
+scale = Vector2(7, 7)
+fill_mode = 4
+texture_under = ExtResource("2_10111")
+texture_progress = ExtResource("3_kj1ee")
+tint_under = Color(0.95, 0.133, 0.82745, 1)
+tint_over = Color(0, 0.616441, 0.642975, 1)
+tint_progress = Color(0.899088, 0.250803, 0.758134, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.513
+offset_left = 1121.98
+offset_top = 226.0
+offset_right = 1160.4
+offset_bottom = 249.0
+text = "ytdrtgtr"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
