@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://6k6bxawpbyet"]
+
+[ext_resource type="Script" uid="uid://cgynw6xn302cg" path="res://atv 19/main.gd" id="1_ejx7g"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ejx7g")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxNome" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Nome" type="Label" parent="HBoxNome"]
+layout_mode = 2
+
+[node name="NomeInput" type="LineEdit" parent="HBoxNome/Nome"]
+layout_mode = 0
+offset_right = 68.5625
+offset_bottom = 31.0
+
+[node name="HBoxIdade" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Idade" type="Label" parent="HBoxIdade"]
+layout_mode = 2
+
+[node name="IdadeInput" type="LineEdit" parent="HBoxIdade/Idade"]
+layout_mode = 0
+offset_right = 68.5625
+offset_bottom = 31.0
+
+[node name="EnviarBtn" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="ResultadoLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
