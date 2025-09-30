@@ -1,15 +1,16 @@
 extends Control
 
-@onready var nome_input = $nome_box/nome_input
-@onready var idade_input = $idade_box/idade_input
-@onready var mensagem_label = $mensagem_label
-@onready var botao_confirmar = $botao_confirmar
+@onready var name_input = $VBoxContainer/HBoxContainer/LineEdit
+@onready var age_input = $VBoxContainer/HBoxContainer2/LineEdit
+@onready var result_label = $VBoxContainer/result_label
+@onready var submit_button = $VBoxContainer/submit_button
 
 func _ready():
-	botao_confirmar.text = "Confirmar"
-	botao_confirmar.pressed.connect(_ao_confirmar)
+	submit_button.pressed.connect(_on_submit_pressed)
 
-func _ao_confirmar():
-	var nome = nome_input.text
-	var idade = idade_input.text
-	mensagem_label.text = "Seu nome é \"" + nome + "\" e sua idade é '" + idade + "'."
+func _on_submit_pressed():
+	var name = name_input.text
+	var age = age_input.text
+	result_label.text = "Seu nome é %s e sua idade é %s" % [name, age]
+
+ 

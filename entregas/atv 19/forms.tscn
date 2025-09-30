@@ -1,62 +1,68 @@
 [gd_scene load_steps=2 format=3 uid="uid://duykrlsurfbwk"]
 
-[ext_resource type="Script" uid="uid://0ceugangygb1" path="res://atv 19/resultado_label.gd" id="1_msgyl"]
+[ext_resource type="Script" uid="uid://cma2t08srcyui" path="res://atv 19/forms.gd" id="1_msgyl"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = -537.0
+offset_bottom = -298.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_msgyl")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 464.0
-offset_top = 24.0
-offset_right = 628.0
-offset_bottom = 64.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="LabelNome" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Insira seu nome aqui"
+
+[node name="LineNome" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer/Label"]
-layout_mode = 0
-offset_left = -462.0
-offset_top = -15.0
-offset_right = -55.0
-offset_bottom = 33.0
-text = "Adicione seu nome:"
-
-[node name="HBoxIdade" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 27.0
-offset_right = 54.0
-offset_bottom = 67.0
-
-[node name="Idade" type="Label" parent="HBoxIdade"]
+[node name="LabelAge" type="Label" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+text = "Insira sua idade aqui
+"
 
-[node name="IdadeInput" type="LineEdit" parent="HBoxIdade/Idade"]
-layout_mode = 0
-offset_left = -11.0
-offset_top = 52.0
-offset_right = 395.0
-offset_bottom = 100.0
-text = "Digite sua idade:"
+[node name="LineAge" type="LineEdit" parent="VBoxContainer/HBoxContainer2/LabelAge"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.062
+anchor_top = -0.735
+anchor_right = 1.844
+anchor_bottom = -0.306
+offset_left = -4.92
+offset_top = 33.015
+offset_right = 32.96
+offset_bottom = 42.994
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 454.0
-offset_top = 40.0
-offset_right = 563.0
-offset_bottom = 111.0
-text = "Clique aqui!"
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "mostrar
+"
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 378.0
-offset_top = 244.0
-offset_right = 823.0
-offset_bottom = 362.0
-script = ExtResource("1_msgyl")
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "resultado"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
