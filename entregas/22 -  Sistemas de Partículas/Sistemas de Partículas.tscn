@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://b22w3s6tcpm1x"]
+
+[ext_resource type="Script" uid="uid://c34aom1qj8cuy" path="res://22 -  Sistemas de Partículas/sistemas_de_partículas.gd" id="1_w18vd"]
+[ext_resource type="Texture2D" uid="uid://c1ntus5mmcmq4" path="res://22 -  Sistemas de Partículas/react-brands-solid-full (3).svg" id="2_v0te2"]
+
+[sub_resource type="Curve" id="Curve_w18vd"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0.0227273, 33.7079), 0.0, 0.0, 0, 0, Vector2(0.232955, 191.011), 0.0, 0.0, 0, 0, Vector2(0.568182, 42.6966), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="SistemasDePartículas" type="Control"]
+modulate = Color(0.882669, 0.218073, 0.662075, 1)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w18vd")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.082
+anchor_top = 0.188
+anchor_right = 0.082
+anchor_bottom = 0.188
+offset_left = 178.536
+offset_top = 36.176
+offset_right = 310.536
+offset_bottom = 104.176
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 158.0
+offset_right = 634.0
+offset_bottom = 226.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(616, 194)
+scale = Vector2(0.05, 0.05)
+skew = -0.481711
+emitting = false
+amount = 100
+texture = ExtResource("2_v0te2")
+lifetime = 0.4
+one_shot = true
+explosiveness = 0.22
+emission_shape = 1
+emission_sphere_radius = 69.52
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+angular_velocity_min = 10.0
+angular_velocity_max = 100.0
+radial_accel_min = 90.0
+radial_accel_max = 100.0
+radial_accel_curve = SubResource("Curve_w18vd")
+angle_min = -14.6
+angle_max = 130.9
+scale_amount_min = 0.05
+scale_amount_max = 0.05
+color = Color(0.855255, 0.207734, 0.505052, 1)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="value_changed" from="ProgressBar" to="." method="_on_progress_bar_value_changed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpiy5lih5ay2s"
-path="res://.godot/imported/32x32 circle bar progress light brown.png-a19b489d53abe4085a7ab755a9c37275.ctex"
+uid="uid://c1ntus5mmcmq4"
+path="res://.godot/imported/react-brands-solid-full (3).svg-eea0675286cd4ddb00964012c6975b7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://atv 18/32x32 circle bar progress light brown.png"
-dest_files=["res://.godot/imported/32x32 circle bar progress light brown.png-a19b489d53abe4085a7ab755a9c37275.ctex"]
+source_file="res://22 -  Sistemas de Partículas/react-brands-solid-full (3).svg"
+dest_files=["res://.godot/imported/react-brands-solid-full (3).svg-eea0675286cd4ddb00964012c6975b7c.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

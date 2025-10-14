@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://duyv7yinokm56" path="res://atividade17/button,_text_edits,_labels_e_option_menu.gd" id="1_v6hnf"]
 [ext_resource type="Script" uid="uid://qc8707lxco77" path="res://atividade17/option_button.gd" id="2_hhuie"]
 
-[node name="Button,TextEdits,LabelsEOptionMenu" type="Control"]
+[node name="Calculadora" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_v6hnf")
