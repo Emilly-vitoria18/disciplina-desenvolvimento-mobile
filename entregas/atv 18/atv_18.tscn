@@ -3,10 +3,8 @@
 [ext_resource type="Script" uid="uid://ddx5hsaewbdko" path="res://atv 18/atv_18.gd" id="1_4dcqo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qf7v8"]
-load_path = "res://.godot/imported/32x32 circle bar progress dark grey.png-6dbe5b8635c1d4e9de8e9672c96d14dc.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rgpgf"]
-load_path = "res://.godot/imported/32x32 circle bar progress light brown.png-24d8fb7d5b56ce62eaac6cb451e999ee.ctex"
 
 [node name="Atv18" type="Control"]
 layout_mode = 3
