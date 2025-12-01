@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3my1j3b632w"]
+
+[ext_resource type="Texture2D" uid="uid://qlhvr40xtk52" path="res://25 - Colisões/PNG/Objects_separately/Crab_shadow3.png" id="1_dllu0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81vmc"]
+atlas = ExtResource("1_dllu0")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ex08n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81vmc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k3u4w"]
+radius = 66.3702
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ex08n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k3u4w")

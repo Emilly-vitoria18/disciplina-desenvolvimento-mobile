@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn33qy5xitx48"]
+
+[ext_resource type="PackedScene" uid="uid://s25xfdcdck1d" path="res://24 - TopDown/word.tscn" id="1_ubqch"]
+[ext_resource type="PackedScene" uid="uid://dl0047h121ij8" path="res://25 - Colisões/obstaculo.tscn" id="2_fxewk"]
+[ext_resource type="PackedScene" uid="uid://c3my1j3b632w" path="res://25 - Colisões/obstaculo2.tscn" id="3_fxewk"]
+
+[node name="fase" type="Node2D"]
+
+[node name="persona" parent="." instance=ExtResource("1_ubqch")]
+
+[node name="Node2D" parent="." instance=ExtResource("2_fxewk")]
+position = Vector2(437, 153)
+scale = Vector2(3, 3)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_fxewk")]
+position = Vector2(211, 357)
