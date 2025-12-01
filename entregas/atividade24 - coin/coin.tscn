@@ -1,0 +1,63 @@
+[gd_scene load_steps=13 format=3 uid="uid://ci1p1usd5kutd"]
+
+[ext_resource type="Texture2D" uid="uid://djx6tma8k2rk3" path="res://atividade24 - coin/assets/coin/coin-frame-1.png" id="1_1yyqp"]
+[ext_resource type="Texture2D" uid="uid://cpibtl7cf8ctk" path="res://atividade24 - coin/assets/coin/coin-frame-2.png" id="2_pppjj"]
+[ext_resource type="Texture2D" uid="uid://dya3pefpnhuma" path="res://atividade24 - coin/assets/coin/coin-frame-3.png" id="3_tpx4q"]
+[ext_resource type="Texture2D" uid="uid://b5nok5vpp5qkb" path="res://atividade24 - coin/assets/coin/coin-frame-4.png" id="4_ex28s"]
+[ext_resource type="Texture2D" uid="uid://dd7f1jw5u8hw0" path="res://atividade24 - coin/assets/coin/coin-frame-5.png" id="5_fs3lp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvifv"]
+atlas = ExtResource("1_1yyqp")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcynh"]
+atlas = ExtResource("2_pppjj")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhhab"]
+atlas = ExtResource("3_tpx4q")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at7qe"]
+atlas = ExtResource("4_ex28s")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq50v"]
+atlas = ExtResource("5_fs3lp")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t8isc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvifv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcynh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhhab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at7qe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq50v")
+}],
+"loop": true,
+"name": &"coin",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7aeru"]
+radius = 19.0263
+
+[node name="Node2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_t8isc")
+animation = &"coin"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7aeru")

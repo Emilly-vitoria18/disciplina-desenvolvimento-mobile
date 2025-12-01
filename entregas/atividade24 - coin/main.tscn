@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://1p1hmevsiq0x"]
+
+[ext_resource type="Texture2D" uid="uid://dntcl43gjnt6o" path="res://atividade24 - coin/assets/grass.png" id="1_h4g6o"]
+[ext_resource type="PackedScene" uid="uid://7qewitlkb7gu" path="res://atividade24 - coin/Player.tscn" id="1_wchh0"]
+[ext_resource type="PackedScene" uid="uid://ci1p1usd5kutd" path="res://atividade24 - coin/coin.tscn" id="3_010gl"]
+
+[node name="main" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_h4g6o")
+stretch_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("1_wchh0")]
+
+[node name="Node2D" parent="." instance=ExtResource("3_010gl")]
+position = Vector2(135, 39)

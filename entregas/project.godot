@@ -14,3 +14,9 @@ config/name="24  - TopDown"
 run/main_scene="uid://s25xfdcdck1d"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
